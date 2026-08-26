@@ -56,6 +56,9 @@ print(a**b)
 # 아이디 : aaa, 패스워드 : 1111
 id = input("아이디 : ")
 pw = int(input("패스워드 : "))
-
+print("아이디 확인 : {}".format("aaa"==id))
+print("패스워드 확인 : {}".format("1111"==pw))
+print("aaa" == id)
+print("1111"==pw)
 print("아이디 : {}, 패스워드 : {}".format(id, pw))
-# 로그인 시 id에 따른 pw값 일치 여부 확인(딕셔너리를 통해서 id:pw 조합으로 일치 여부 확인 조건문 설정)
+# 로그인 시 id에 따른 pw값 일치 여부 확인(딕셔너리를 통해서 id가 있는 지 그리고 id:pw 조합으로 일치 여부 확인 조건문 설정)

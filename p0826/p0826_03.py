@@ -7,8 +7,12 @@ print(num1, num2, num3)
 num4 = num5 = num6 = 1
 print(num4, num5, num6)
 
-# a1=1, a2="안녕" # 값이 다른 것은 한줄에 넣을 수 없다.
+# a1=1, a2="안녕" # 값이 다른 것은 한줄에 넣을 수 없다. 병렬해서 넣을 수 없음
 # print(a1, a2) # 에러가 남
+
+a = 1
+b = "안녕"
+print(a, b)
 
 a1=1
 a2=2 
@@ -54,11 +58,11 @@ print(a**b)
 
 # 아이디, 패스워드를 입력받아 출력하시오
 # 아이디 : aaa, 패스워드 : 1111
-id = input("아이디 : ")
-pw = int(input("패스워드 : "))
-print("아이디 확인 : {}".format("aaa"==id))
-print("패스워드 확인 : {}".format("1111"==pw))
-print("aaa" == id)
-print("1111"==pw)
-print("아이디 : {}, 패스워드 : {}".format(id, pw))
+# id = input("아이디 : ")
+# pw = int(input("패스워드 : "))
+# print("아이디 확인 : {}".format("aaa"==id))
+# print("패스워드 확인 : {}".format("1111"==pw))
+# print("aaa" == id)
+# print("1111"==pw)
+# print("아이디 : {}, 패스워드 : {}".format(id, pw))
 # 로그인 시 id에 따른 pw값 일치 여부 확인(딕셔너리를 통해서 id가 있는 지 그리고 id:pw 조합으로 일치 여부 확인 조건문 설정)

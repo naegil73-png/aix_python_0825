@@ -24,37 +24,37 @@ print(int(str3)+1)
 # # 번호, 이름, 국어, 영어, 수학을 입력받아
 # # 번호, 이름, 국어, 영어, 수학, 합계, 평균을 출력하시오. 평균은 소숫점 둘째자리까지 표시
 # # 결과 : 1 홍길동 100 100 100 300 100.0
-# num = input("번호를 입력하세요 : ")
-# name = input("이름을 입력하세요 : ")
-# kor = int(input("국어 점수를 입력하세요 : "))
-# eng = int(input("영어 점수를 입력하세요 : "))
-# math = int(input("수학 점수를 입력하세요 : "))
-# total = kor+eng+math
-# avg = total/3 # 나누기하면 실수형으로 바뀜
+num = input("번호를 입력하세요 : ")
+name = input("이름을 입력하세요 : ")
+kor = int(input("국어 점수를 입력하세요 : "))
+eng = int(input("영어 점수를 입력하세요 : "))
+math = int(input("수학 점수를 입력하세요 : "))
+total = kor+eng+math
+avg = total/3 # 나누기하면 실수형으로 바뀜
 
-# print("{} {} {} {} {} {} {}".format(num,name,kor,eng,math,total,avg))
-# print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(num,name,kor,eng,math,total,avg))
+print("{} {} {} {} {} {} {}".format(num,name,kor,eng,math,total,avg))
+print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(num,name,kor,eng,math,total,avg))
 
-# # 결과 위, 아래 줄을 그으려면
-# print("-"*60)
-# print("번호\t이름\t국어\t영어\t수학\t합계\t평균".format(num,name,kor,eng,math,total,avg))
-# print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(num,name,kor,eng,math,total,avg))
-# print("-"*60)
+# 결과 위, 아래 줄을 그으려면
+print("-"*60)
+print("번호\t이름\t국어\t영어\t수학\t합계\t평균".format(num,name,kor,eng,math,total,avg))
+print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(num,name,kor,eng,math,total,avg))
+print("-"*60)
 
-# # 1명을 추가하려면.. 2 유관순 100 100 98
-# num2 = input("번호를 입력하세요 : ")
-# name2 = input("이름을 입력하세요 : ")
-# kor2 = int(input("국어 점수를 입력하세요 : "))
-# eng2 = int(input("영어 점수를 입력하세요 : "))
-# math2 = int(input("수학 점수를 입력하세요 : "))
-# total2 = kor2+eng2+math2
-# avg2 = total2/3 # 나누기하면 실수형으로 바뀜
+# 1명을 추가하려면.. 2 유관순 100 100 98
+num2 = input("번호를 입력하세요 : ")
+name2 = input("이름을 입력하세요 : ")
+kor2 = int(input("국어 점수를 입력하세요 : "))
+eng2 = int(input("영어 점수를 입력하세요 : "))
+math2 = int(input("수학 점수를 입력하세요 : "))
+total2 = kor2+eng2+math2
+avg2 = total2/3 # 나누기하면 실수형으로 바뀜
 
-# print("-"*60)
-# print("번호\t이름\t국어\t영어\t수학\t합계\t평균".format(num,name,kor,eng,math,total,avg))
-# print("{}\t{}\t{}\t{}\t{}\t{}\t{:.2f}".format(num,name,kor,eng,math,total,avg))
-# print("{}\t{}\t{}\t{}\t{}\t{}\t{:.2f}".format(num2,name2,kor2,eng2,math2,total2,avg2))
-# print("-"*60)
+print("-"*60)
+print("번호\t이름\t국어\t영어\t수학\t합계\t평균".format(num,name,kor,eng,math,total,avg))
+print("{}\t{}\t{}\t{}\t{}\t{}\t{:.2f}".format(num,name,kor,eng,math,total,avg))
+print("{}\t{}\t{}\t{}\t{}\t{}\t{:.2f}".format(num2,name2,kor2,eng2,math2,total2,avg2))
+print("-"*60)
 
 # # 위의 함수에서 사람이 추가될 경우, for 문 등으로 사용 가능
 

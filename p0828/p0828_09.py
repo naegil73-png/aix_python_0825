@@ -119,3 +119,9 @@ for i in range(0,10):
             num += 1
             print(num,"번째 계산")
             print("{} X {} X {} = {}".format(i,j,k,i*j*k))
+
+# 순번표
+for i in range(0,10):
+    for j in range(0,10):
+        for k in range(0,10):
+            print("{}{}{}".format(i,j,k))

@@ -14,31 +14,31 @@ for i in range(3):
     name = input("이름입력:")
     print(name)
 '''
-'''
+
 # [학생명단]
 # 홍길동
 # 유관순
 # 이순신
-name = []
-for i in range(3):
-    name.append(input("이름:"))
-print("학생명단:",name)
+# name = []
+# for i in range(3):
+#     name.append(input("이름:"))
+# print("학생명단:",name)
 
 
-# 가급적 이런 형태로 출력
-name = []
-for i in range(3):
-    name.append(input("이름:"))
-print("학생명단:",name)
-name = []
-for i in range(3):
-    name.append(input("이름:"))
-for i in range(3):
-    print("학생명단:",name)
+# # 가급적 이런 형태로 출력
+# name = []
+# for i in range(3):
+#     name.append(input("이름:"))
+# print("학생명단:",name)
+# name = []
+# for i in range(3):
+#     name.append(input("이름:"))
+# for i in range(3):
+#     print("학생명단:",name)
 
-for i in range(1,11):
-    print(i)
-'''
+# for i in range(1,11):
+#     print(i)
+
 
 # 10, 20, 30, .... 100 출력되게 작성
 for i in range(1,11):
@@ -48,6 +48,7 @@ for i in range(1,11):
 arr = [1,3,5,7] 
 for i in arr:
     print(i)
+# 또는    
 arrs = [1,3,5,7]
 for arr in arrs:
     print(arr)

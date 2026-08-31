@@ -108,12 +108,14 @@ mynum = []
 while i < 6:
     mynum1 = int(input("숫자입력"))
     if mynum1 not in mynum:
-        mynum.append(mynum1)
         i = i+1
     else:
         print("숫자가 있습니다. 다른 숫자를 고르세요") # 잘못 입력했을 때, 횟수가 추가되지 않게 하기 위해 i = i+1 하지 않음
     if mynum1 < 1 or mynum1 > 45:
         print("1~45사이 숫자로 골라주세요.")
+    else:
+        mynum.append(mynum1)
+
 answer = []
 count = 0
 for i in mynum:

@@ -210,15 +210,129 @@ for i in range(2,10):
 #         print(f"{i} X {j} = {i*j}")
 #     print()
 
-# 리스트에서 항목 추가
-list_a = ["바나나", "딸기", "사과"]
-list_a.append(input("과일이름:"))
+# # 리스트에서 항목 추가
+# list_a = ["바나나", "딸기", "사과"]
+# list_a.append(input("과일이름:"))
 
-# for문 이용해서 3개를 추가하려고 하면..
-# for문은 같은 구문 반복, 추가 구문, 3번 반복
+# # 리스트에 for문 이용해서 3개를 추가하려고 하면..
+# # for문은 같은 구문 반복, 추가 구문, 3번 반복, 리스트에 추가는 append
 
+# list_a = ["바나나", "딸기", "사과"]
+# for i in range(3): # 추가 구문을 3번 반복한다.
+#     list_a.append(input("과일이름:"))
+# for i in list_a:
+#     print(i)
+
+# 리스트를 순서대로 출력하려면
 list_a = ["바나나", "딸기", "사과"]
-for i in range(3): # 추가 구문을 3번 반복한다.
-    list_a.append(input("과일이름:"))
 for i in list_a:
     print(i)
+
+# 1:바나나, 2:딸기, 3:바나나로 출력하고 싶다면..
+j = 1
+list_a = ["바나나", "딸기", "사과"]
+for i in list_a:
+    print(j,":",i)
+    j = j + 1
+
+# 위의 방법이 번거로움 -> ******* enumerate 함수 : index번호(0부터 시작함)와 리스트 값 2개를 반환함
+for i,value in enumerate(list_a):
+    print(i+1,":",value)
+
+for i in range(3):
+    print(i+1,":",list_a[i])
+
+# 리스트의 원소 수가 변경되어 4개가 되거나 5개로 변경된다고 하더라도 모든 요소가 출력되게 하려면..
+# 리스트 원소 길이만큼 반복하게 하면 됨
+for i in range(len(list_a)):
+    print(i+1,":",list_a[i])
+
+
+for i in range(1,4):
+    print(i)
+
+print("for문 밖 i : ",i+5)
+
+for i in range(1,4):
+    print(i) 
+
+# # 이름, 국어점수를 3개 받아서 출력
+# # [학생성적]
+# # 홍길동 70
+# # 유관순 100
+# # 이순신 90
+
+# list_1 = []
+# name = []
+# kor = []
+# for i in range(3):
+#     name.append(input("이름:"))
+#     kor.append(int(input("국어점수:")))
+# print("[학생성적]")
+# for i in range(len(name)):
+#     print(f"{name[i]}\t{kor[i]}")
+
+# # 위에서 영어점수, 수학점수 추가
+# list_1 = []
+# name = []
+# kor = []
+# eng = []
+# math = []
+# for i in range(3):
+#     name.append(input("이름:"))
+#     kor.append(int(input("국어점수:")))
+#     eng.append(int(input("영어점수:")))
+#     math.append(int(input("수학점수:")))
+# print("[학생성적]")
+# print(f"이름\t국어\t영어\t수학")
+
+# for i in range(len(name)):
+#     print(f"{name[i]}\t{kor[i]}\t{eng[i]}\t{math[i]}")
+
+# # 위에서 합계, 평균 추가 -> 계산이 추가 -> 리스트로 계산 불가
+# name = []
+# kor = []
+# eng = []
+# math = []
+# total = []
+# avg = []
+# for i in range(3):
+#     name.append(input("이름입력 :"))
+#     k_input = int(input("국어점수입력 : "))
+#     kor.append(k_input)
+#     e_input = int(input("영어점수입력 : "))
+#     eng.append(e_input)
+#     m_input = int(input("수학점수입력 : "))
+#     math.append(m_input)
+#     total.append(k_input+e_input+m_input)
+#     avg.append((k_input+e_input+m_input)/3)
+
+# print("[ 학생성적 ]")
+# print("번호\t이름\t국어\t영어\t수학\t합계\t평균\t")
+# print("-"*60)
+# for i in range(len(name)):
+#     print(f"{i+1}\t{name[i]}\t{kor[i]}\t{eng[i]}\t{math[i]}\
+# \t{total[i]}\t{avg[i]:.2f}")
+
+# # 위의 구문을 이렇게 작성하면 안됨. 합계는 리스트+리스트가 되고, 평균은 typeerror 발생
+# name = []
+# kor = []
+# eng = []
+# math = []
+# total = []
+# avg = []
+# for i in range(3):
+#     name.append(input("이름입력 :"))
+#     kor.append(int(input("국어점수입력 : ")))
+#     eng.append(int(input("영어점수입력 : ")))
+#     math.append(int(input("수학점수입력 : ")))
+#     total.append(kor+eng+math)
+#     avg.append((kor+eng+math)/3)
+
+# print("[ 학생성적 ]")
+# print("번호\t이름\t국어\t영어\t수학\t합계\t평균\t")
+# print("-"*60)
+# for i in range(len(name)):
+#     print(f"{i+1}\t{name[i]}\t{kor[i]}\t{eng[i]}\t{math[i]}\
+# \t{total[i]}\t{avg[i]:.2f}")
+

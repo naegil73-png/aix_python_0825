@@ -20,6 +20,7 @@ for i in inputNo:
     else: continue
 print("개수:",num, answerNo)
 
+# 맞출 때까지 입력하는 프로그램
 # 입력한 숫자를 모두 저장해서 프로그램을 종료할 때 출력하시오.
 # 0을 입력시 프로그램 종료. noArr 값과 일치하는 갯수 출력
 

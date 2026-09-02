@@ -37,16 +37,38 @@
 #     str1 = input("출력하려는 문구를 입력: ")
 #     print1(num1, str1) # 함수호출 문의 변수 갯수는 함수 정의 구문의 매개변수 수가 같아야 함
 
-# 함수리턴
-def add(num1,num2):
-    sum = num1+num2
-    return sum # return은 호출하는 곳으로 값을
+# # 함수리턴
+# def add(num1,num2):
+#     sum = num1+num2
+#     return sum # return은 호출하는 곳으로 값을
 
-while True:
-    num1 = int(input("숫자입력: "))
-    num2 = int(input("숫자입력: "))
-    total = add(num1,num2) 
-    print("결과값:",total)
+# while True:
+#     num1 = int(input("숫자입력: "))
+#     num2 = int(input("숫자입력: "))
+#     total = add(num1,num2) 
+#     print("결과값:",total)
 
-# 수식을 활용하고 싶으면 함수 호출, 계산된 값을 호출한 곳으로 전달하고 싶으면 return을 써야 함.
-# 함수를 직접, add(num1,num2)로 호출하는 게 아니라, total = add(num1,num2)와 같이 호출하면 return을 써야 함
+# # 수식을 활용하고 싶으면 함수 호출, 계산된 값을 호출한 곳으로 전달하고 싶으면 return을 써야 함.
+# # 함수를 직접, add(num1,num2)로 호출하는 게 아니라, total = add(num1,num2)와 같이 호출하면 return을 써야 함
+
+def cal(num1,num2,str1):
+    result = 0
+    if str1 == "+":
+        result = num1+num2
+    elif str1 == "-":
+        result = num1-num2
+    elif str1 == "*":
+        result = num1*num2
+    else:
+        result = num1/num2
+    return result
+
+num1 = int(input("숫자입력:")) # 직접 함수 호출이
+num2 = int(input("숫자입력:"))
+str1 = input("+,-,*,/ 중에 하나를 입력하세요.")
+result = cal(num1,num2,str1)
+print("결과값:",result)
+
+# ******* 함수에서 오류 발생 시, 터미널에서 에러가 난 곳으로 이동해서
+# 그 행을 선택해서 빨간점이 나오게 클릭하고, run>start deburgging을 누르면 한줄씩 실행됨 -> f11을 누르면, 한줄씩 진행됨 -> 에러가 나는 곳 확인 가능
+

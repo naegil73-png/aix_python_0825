@@ -1,5 +1,6 @@
 # p0902_09.py에 있는 구구단 함수를 사용하려면..
 
-from p0902_09 import gugudan_func
+from p0902_09 import gugudan_func # 해당파일에는 while문이 무조건 실행되게 되어 있어서 1~3번 모두 실행할 수 있음
 gugudan_func()
 
+# 함수는 1개만 담을 수 있음, 함수를 재정의할 수 없음 -> 클래스는 여러개의 함수와 변수를 담을 수 있음.

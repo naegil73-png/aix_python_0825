@@ -112,61 +112,99 @@
 #         aa_dic[i] += 1
 # print(aa_dic)
 
-aa = "a/b/c/d/f/g" # 각 요소를 분리
-aa_list = aa.split("/")
-print(aa_list)
+# aa = "a/b/c/d/f/g" # 각 요소를 분리
+# aa_list = aa.split("/")
+# print(aa_list)
 
-# 아래 bb열에 있는 모든 수의 합을 구하시오.
-bb = "100,10,5,4,1"
+# # 아래 bb열에 있는 모든 수의 합을 구하시오.
+# bb = "100,10,5,4,1"
+# # 순서 : 각 요소를 분리 -> 리스트화 -> 숫자로 변환 -> 합계 도출
 
-bb_list = bb.split(",") # 리스트로 변환함
-print(bb_list)
+# bb_list = bb.split(",") # 리스트로 변환함
+# print(bb_list)
 
-bb_list2 = [int(i) for i in bb_list] # bb_list에 있는 각 요소를 숫자화하라.
-print(bb_list2)
+# bb_list2 = [int(i) for i in bb_list] # bb_list에 있는 각 요소를 숫자화하라.
+# print(bb_list2)
 
-total = 0
-for i in bb_list2:
-    total += i
-print(total)
+# total = 0
+# for i in bb_list2:
+#     total += i
+# print(total)
 
-# 문자열 찾기 : find, index(없으면 에러 -> 요소가 있는 지 확인 후 사용)
+# # 문자열 찾기 : find, index(없으면 에러 -> 요소가 있는 지 확인 후 사용)
 
-ss = "파이썬 공부!! 열심히 합시다. 파이썬"
-print(ss.count("공부"))
-print(ss.count("파이썬")) # 갯수 반환
-print(ss.find("공부")) # 위치 값 반환
-print(ss.find("자바")) # 없을 때, -1 반환, rfind는 우측에서 찾음
-print(ss.startswith("파이썬"))
-print(ss.endswith("파이썬")) # 끝이 파이썬으로 끝나느냐 확인. 확장자 명 확인할 때 주로 사용
+# ss = "파이썬 공부!! 열심히 합시다. 파이썬"
+# print(ss.count("공부"))
+# print(ss.count("파이썬")) # 갯수 반환
+# print(ss.find("공부")) # 위치 값 반환
+# print(ss.find("자바")) # 없을 때, -1 반환, rfind는 우측에서 찾음
+# print(ss.startswith("파이썬"))
+# print(ss.endswith("파이썬")) # 끝이 파이썬으로 끝나느냐 확인. 확장자 명 확인할 때 주로 사용
 
-# # 공백 제거 : strip
-# aa = input("이름을 입력하세요: ") # 이런 경우, space bar가 들어갈 경우, 찾아도 찾아지지 않는 경우가 많음
-# aa = input("이름을 입력하세요: ").strip() # 입력 시 입력문자 앞뒤 공백을 제거할 경우 사용
+# # # 공백 제거 : strip
+# # aa = input("이름을 입력하세요: ") # 이런 경우, space bar가 들어갈 경우, 찾아도 찾아지지 않는 경우가 많음
+# # aa = input("이름을 입력하세요: ").strip() # 입력 시 입력문자 앞뒤 공백을 제거할 경우 사용
 
-# aa = [1,2,    3,4,5]
-# aa.strip()
-# print(aa)
+# # aa = [1,2,    3,4,5]
+# # aa.strip()
+# # print(aa)
 
-ss = "     파이썬" # 공백제거
-ss2 = "<<<<파<<이<썬" # < 제거
+# ss = "     파이썬" # 공백제거
+# ss2 = "<<<<파<<이<썬" # < 제거
 
-ss1= ss.strip()
-print(ss1)
+# ss1= ss.strip()
+# print(ss1)
 
-ss3= ss2.replace("<","")
-print(ss3)
+# ss3= ss2.replace("<","")
+# print(ss3)
 
-# join 함수 : 추가요소.join(자료(또는 자료명))
-aa = "/"
-bb = aa.join("바나나")
-print(bb)
+# # join 함수 : 추가요소.join(자료(또는 자료명)), 결합은 문자열만 가능(숫자는 불가)
+# aa = "/"
+# bb = aa.join("바나나")
+# print(bb)
 
-aa = "/"
-bb = aa.join(["바나나","딸기","바나나"])
-print(bb)
+# aa = "/"
+# bb = aa.join(["바나나","딸기","바나나"])
+# print(bb)
 
-cc = "abc"
-aa = "/"
-bb = aa.join(cc)
-print(bb)
+# cc = "abc"
+# aa = "/"
+# bb = aa.join(cc)
+# print(bb)
+
+### 앞 뒤 공백제거 : strip()
+a = "     abc     "
+print(a.strip()) # 공백제거를 하나, 원 자료에 반영은 안됨
+print(a) # 공백 그대로
+
+### 중간공백 제거 : replace()
+b = "    a     b    "
+print(b.replace(" ",""))
+
+c = "a,b,c,d,e" # 따옴표 안에 있는 것 모두 출력 - 문자열은 " "안에 있는 것 그대로 출력
+print(c)
+print(c.split(","))
+
+### 분리 : split() -> 리스트 형태로 반환
+a = "바나나, 딸기, 사과"
+print(a.split(","))
+
+# "1,홍길동,100,100,100,300,100" 이것을 국어 90점으로 변경하고, 합계와 평균을 구하고 다시 문자열로 변환
+d = "1,홍길동,100,100,100,300,100"
+dlist = d.split(",")
+# 값을 수정하려면
+dlist[2] = 90
+dlist[3] = int(dlist[3])
+dlist[4] = int(dlist[4])
+dlist[5] = dlist[2]+dlist[3]+dlist[4]
+dlist[6] = dlist[5]/3
+dlist2 = [str(i) for i in dlist]
+print(dlist)
+
+# 문자열로 변경 - join함수
+d_str = ",".join(dlist2)
+print(d_str)
+
+# count : 문자열 안에 해당문자가 몇개 있는 지 확인
+# find : 문자열 안에 해당문자 위치 반환, 없으면 -1
+# index : 문자열 안에 해당문자 위치 반환, 없으면 에러 발생

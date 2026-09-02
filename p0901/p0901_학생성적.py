@@ -41,20 +41,18 @@ while True:
             print()
 
     elif choice == 2:
-        print()
         print("[학생성적출력]")
         print("입력된 학생성적:",len(stu_list))
+        print("번호\t이름\t국어\t영어\t수학\t합계\t평균")
         print("-"*60)
         for s in stu_list:
             print("{}\t{}\t{}\t{}\t{}\t{}\t{:.2f}".format(*s))
 
     elif choice == 3:
-        print()
         print("[학생성적수정]")
 
     
     elif choice == 4:
-        print()
         print("[학생성적삭제]")
 
     

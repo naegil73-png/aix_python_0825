@@ -16,7 +16,8 @@ news = open("new1.txt","r",encoding="utf-8")
 while True:
     str = news.readline() # 1줄씩 읽어오기
     if str == "": break # "" - 빈공백, 즉 빈공백이면, break
-    print(str,end="")
+    print(str,end="") # 파일에 줄바꿈(\n)이 있기 때문에 print에 있는 줄바꿈을 ""로 변경
 news.close()
 
 # 인코딩 방식 - cp949 : 한글 ms에서만 가능, euc-kr : 국내 한글표준, utf-8: 국제 한글표준
+

@@ -148,12 +148,12 @@ while True:
         break
 
 
-# 함수로 작성
+# ******* 함수로 작성
 
 # 변수 선언부분
 # 개인정보
 my_info = {"id":"aaa","pw":"1111",\
-           "money":10_000_000,"bonusPoint":0}
+        "money":10_000_000,"bonusPoint":0}
 # 구매리스트
 cart = []
 # 상품

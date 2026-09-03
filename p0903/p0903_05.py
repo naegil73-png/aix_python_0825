@@ -20,7 +20,10 @@
 #         print("가격 : 100만원")
 #     else:break
 
-# my_info - id:aaa, pw:1111, money:10000000,bonuspoint:0 으로 product - name
+# my_info - id:aaa, pw:1111, money:10000000,bonuspoint:0 으로 
+# product - 제품명: 컴퓨터, 가격:100만, 제품: 냉장고, 가격 : 200만, 제품:오디오, 가격:50만, 제품:세탁기, 가격:150만 을 구매해서 구매금액, 잔액 출력
+# 잔액이 부족한 경우, 부족하다는 문구 표시
+
 # 제품이 많은 경우, 위 구문을 줄인다면..
 my_info = {"id":"aaa","pw":"1111",\
         "money":10_000_000,\

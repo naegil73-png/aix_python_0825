@@ -32,6 +32,7 @@ while True:
             my_info['money'] -= s_arr[choice-1]['price']
             print(f"잔고는 {[my_info['money']]}원 입니다.")
             cal()
+            
     elif choice == 2:
         print("냉장고")
         num = int((input('구매결정(1:구매, 0:취소):')))

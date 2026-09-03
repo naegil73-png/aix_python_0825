@@ -20,6 +20,7 @@
 #         print("가격 : 100만원")
 #     else:break
 
+# my_info - id:aaa, pw:1111, money:10000000,bonuspoint:0 으로 product - name
 # 제품이 많은 경우, 위 구문을 줄인다면..
 my_info = {"id":"aaa","pw":"1111",\
         "money":10_000_000,\

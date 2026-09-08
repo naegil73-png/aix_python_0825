@@ -38,11 +38,10 @@ s1 = Student(1,"홍길동",100,100,99)
 s2 = Student(2,"유관순",100,100,99)
 
 # 5.Student가 실행한 결과를 변수에 더함(문자열)
-stus.add(s1) # stus에 s1 = Student의 결과 합함 -> 
-stus.add(s2) # stus에 s1 = Student의 결과 합함 -> 각각 떨어진 자료
-# 각 자료를 한데 묶는 과정과 자료명도 같이 출력이 필요 -> 
-# 각 결과를 하나의 변수로 받아 리스트로 반환, print의 for문으로 실행
+stus.add(s1) # stus에 add함수를 적용하라. 입력변수는 s1이다.
+stus.add(s2) # stus에 add함수를 적용하라. 입력변수는 s2이다. = Student의 결과 합함 -> 떨어진 개별자료 -> 자료명과 자료 묶는 과정이 필요 -> 
+# 결과를 하나의 변수로 받아 리스트로 반환, 각 결과물을 순차적으로 출력하기 위해 print의 for문으로 실행 -> students로 이동
 
-stus.print()
+stus.print() # 7.stus에 print함수를 적용하라.
 
 

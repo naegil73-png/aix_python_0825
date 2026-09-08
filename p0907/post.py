@@ -80,4 +80,4 @@ def s_modi():
     print("학생성적수정관리")
     print("-"*60)
     m_s = input("수정할 학생이름:")
-    if 
+    

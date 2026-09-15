@@ -1,5 +1,5 @@
-from t_student import Student
-from t_students import Students
+from tstudent import Student
+from tstudents import Students
 
 stus = Students()
 stuNum = 1
@@ -59,6 +59,7 @@ def s_input():
         print('[학생성적입력]')
         no = stuNum
         name = input("학생이름:")
+        if name == "0": break
         kor = int(input("국어:"))
         eng = int(input("영어:"))
         math = int(input("수학:"))
@@ -71,10 +72,7 @@ def s_input():
         stuNum += 1
 
 def s_output():
-    with open("C:\\aaa\\stu.txt",'r',encoding='utf-8') as f:
-        for s in stus.slist:
-            str = s.s_str()
-            f.write(str+'\n')
+    stus.print()
 
 
 def s_update():

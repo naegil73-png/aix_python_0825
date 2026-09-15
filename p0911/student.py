@@ -1,5 +1,12 @@
 class Student:
-
+    no = 0
+    name = ""
+    kor = 0
+    eng = 0
+    math = 0
+    total = 0
+    avg = 0
+    rank = 0
     def __init__(self,*args):
         if len(args) == 5:
             self.no = args[0]
@@ -18,16 +25,16 @@ class Student:
             self.eng = args[3]
             self.math = args[4]
             self.total = args[5]
-            self.avg = args[6]
+            self.avg = args[6]/3
             self.rank = args[7]
 
     def __str__(self):
         return f"{self.no}\t{self.name}\t{self.kor}\t{self.eng}\t{self.math}\t{self.total}\t{self.avg}\t{self.rank}"
 
-    def cal_total(self):
+    def s_total(self):
             self.total = self.kor+self.eng+self.math
 
-    def cal_avg(self):
+    def s_avg(self):
             self.avg = self.total/3
 
     def s_str(self):

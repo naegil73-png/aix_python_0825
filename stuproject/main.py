@@ -9,10 +9,9 @@ while True:
     elif choice == 2:
         stu_output()   # 2.학생성적출력함수
     elif choice == 3:
-        print("[학생성적수정]")
         stu_update()
     elif choice == 8:
-        print("[등수처리]")
+        print("[ 등수처리 ]")
     elif choice == 9:
         writeStu()
     else:

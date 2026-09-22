@@ -20,18 +20,18 @@ def readStu():
                 elif 2<=i<=5: stu[i] = int(s.strip())
                 elif i==6: stu[i] = float(s.strip())
                 elif i==7: stu[i] = int(s.strip())
-            # Student(1,"홍길동",100,100,100)
             # 클래스 추가
             # 객체선언후 > Students리스트에 추가
             stus.add(Student(stu[0],stu[1],stu[2],stu[3],stu[4],stu[5],stu[6],stu[7]))
-            # 번호추가부분
+            ## 번호추가부분
             stuNum = len(stus.slist)+1
+
 
 # 학생성적파일 저장하기 - stuList의 모든것을 저장시킴
 def writeStu():
     with open("c:/aaa/stu.txt","w",encoding="utf-8") as f:
         for s in stus.slist:
-            str = s.s_str()   # Student객체의 s_str()함수호출
+            str = s.s_str()   # Student객체의 s_str()함수호출 
             f.write(str+"\n")
         print("성적파일이 저장되었습니다.")
         print()
@@ -74,38 +74,39 @@ def stu_input():
 def stu_output():
     stus.print() # Students print()함수 호출
 
-# 3.학생성적수정 : main에서
+# 3. 학생성적수정
 def stu_update():
-    print() # stus.slist
-    print("[학생성적수정]")
-    name = input("학생이름 검색:")
-    temp = 0 # 찾았는 지 여부 판정에 활용
-    for s in stus.slist: 
+    print()   # stus.slist
+    print("[ 학생성적수정 ]")
+    name = input("학생이름 검색 : ")    
+    temp = 0
+    for s in stus.slist:
         if s.name == name:
             temp = 1
             print(f"{name}학생이 검색되었습니다.")
-            print("[수정과목]")
-            print("1.국어, 2.영어, 3.수학")
+            print("[ 수정과목 ]")
+            print("1.국어  2.영어  3.수학")
             print("-"*60)
-            choice = int(input("과목을 선택하세요.(0:취소)"))
-            if choice == 0:break
+            choice = int(input("과목을 선택하세요.(0.취소)>> "))
+            if choice == 0:
+                break
             elif choice == 1:
-                print("[국어점수 변경]")
-                print("현재점수:",s.kor)
-                s.kor = int(input("변경점수입력:"))
-
+                print("[ 국어점수 변경 ]")
+                print("현재점수 : ",s.kor)
+                s.kor = int(input("변경점수입력 : "))               
             elif choice == 2:
-                print("[영어점수 변경]")
-                print("현재점수:",s.eng)
-                s.eng = int(input("변경점수입력:"))
-
+                print("[ 영어점수 변경 ]")
+                print("현재점수 : ",s.eng)
+                s.eng = int(input("변경점수입력 : "))              
             elif choice == 3:
-                print("[수학점수 변경]")
-                print("현재점수:",s.math)
-                s.math = int(input("변경점수입력:"))
+                print("[ 수학점수 변경 ]")
+                print("현재점수 : ",s.math)
+                s.math = int(input("변경점수입력 : "))
+
             s.s_total()
             s.s_avg()
             print("수정이 완료되었습니다.")
             print()
-    if temp == 0:
-        print(f"{name}학생이 없습니다. 다시 검색하세요.")
+
+    if temp==0:
+        print(f"{name} 학생이 없습니다. 다시 검색하세요.")    

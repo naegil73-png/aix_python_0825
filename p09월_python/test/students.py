@@ -6,8 +6,7 @@ class Students:
 
     def print(self):
         print("-"*70)
-        print("번호","이름","국어","영어","수학","합계","평균","등수",sep="\t")
-        print("-"*70)
+        print("번호\t이름\t국어\t영어\t수학\t합계\t평균\t등수")
         print("-"*70)
         for s in self.slist:
             print(s)

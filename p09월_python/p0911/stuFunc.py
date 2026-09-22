@@ -10,7 +10,7 @@ def readStu():
         while True:
             str = f.readline()
             if str == "": break
-            stu = str.strip().split(",")
+            stu = str.strip().split(",") # , 미입력
             for i, v in enumerate(stu):
                 if 0<= i <= 1:continue
                 if 2<= i <= 5:

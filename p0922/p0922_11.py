@@ -11,10 +11,10 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-# # 2.selenium 파일저장
-# browser = webdriver.Chrome()
-# url = "https://stock.naver.com/market/stock/kr/stocklist/priceTop"
-# browser.get(url)
+# 2.selenium 파일저장
+browser = webdriver.Chrome()
+url = "https://stock.naver.com/market/stock/kr/stocklist/priceTop"
+browser.get(url)
 # time.sleep(3)
 # soup = BeautifulSoup(browser.page_source,'lxml')
 # with open('stock1.html','w',encoding='utf-8') as f:
@@ -42,7 +42,7 @@ import os
 # 5. browser.quit()
 
 
-# # 파일 BeautifulSoup변환
+# # 파일 BeautifulSoup변환 -> 고정된 형태, 그대로 사용하면 됨
 # with open('stock1.html','r',encoding='utf-8') as f:
 #     soup = BeautifulSoup(f,'lxml')
 

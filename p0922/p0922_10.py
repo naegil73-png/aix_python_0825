@@ -18,7 +18,8 @@ url = "http://www.naver.com"
 # 1.naver페이지 열림.
 browser.get(url)
 # 브라우저의 위치값을 찾아서 클릭하기
-elem = browser.find_element(By.ID,'query') # 하나 찾을 때는 element, 여러개는 elements
+elem = browser.find_element(By.ID,'query') # id가 query인 태그, query는 검색창
+# By는 html태그 찾을 때, ID, class네임 기준 지정 도구(지금은 ID태그), id의 속성값이 query인 것을 가져와라. 하나 찾을 때는 element, 여러개는 elements
 elem.click()
 # 뉴스페이지 이동
 elem.send_keys("뉴스")

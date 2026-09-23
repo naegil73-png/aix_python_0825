@@ -1,9 +1,16 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import requests
 from bs4 import BeautifulSoup
+import time
+import os
 
-url ="http://www.naver.com"
-headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"}
-res = requests.get(url, headers=headers)
-res.raise_for_status()
+browser = webdriver.Chrome()
+url = "https://stock.naver.com/market/stock/kr/stocklist/priceTop"
+browser.get(url)
+time.sleep(3)
 
-soup = BeautifulSoup(res.text,"lxml")
+elem = browser.find_elements(By.CSS_SELECTOR,"tbody tr")
+for el in elem:
+    print(el.text)
